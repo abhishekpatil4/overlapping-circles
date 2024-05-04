@@ -15,7 +15,7 @@ export const AddCircle = () => {
         //need to check if new circle overlaps with exiting ones, if so increase the overlapping count and change its color
         let tempCords = [...cords]; //changes are made in this tempCords variable and the update to main
         let latestCords = tempCords[tempCords.length - 1] //last element -> ie the latest element 
-        for (let i = 0; i < cords.length-1; i++) {
+        for (let i = 0; i < cords.length - 1; i++) {
             if (!tempCords[i].overlappedWith.includes(latestCords.id) && distanceBetweenCircles(latestCords.x, latestCords.y, 50, tempCords[i].x, tempCords[i].y, 50) < 0) {
                 tempCords[i].num++;
                 tempCords[i].overlappedWith.push(latestCords.id); //adding the id of new circle 
@@ -31,7 +31,7 @@ export const AddCircle = () => {
             x: clientX,
             y: clientY,
             num: 0,
-            overlappedWith:[],
+            overlappedWith: [],
         };
         // Passing a callback function to setCords to ensure we're working with the updated state
         setCords((prevCords) => {
@@ -48,6 +48,7 @@ export const AddCircle = () => {
     return <>
         <div style={{ height: '100vh', width: "100vw" }} onClick={(event) => handleClick(event)}>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <h1 style={{ textAlign: 'center' }}>Tap anywhere!</h1>
                 {
                     cords && cords.map((cord, idx) =>
                         <Circle key={idx} color={colorFor[cord.num]} number={cord.num} x={cord.x} y={cord.y} />

@@ -3,8 +3,7 @@ import { AddCircle } from './components/AddCircle'
 function App() {
   return (
     <div>
-    <h1 style={{textAlign:'center'}}>Tap anywhere!</h1>
-    <AddCircle />
+      <AddCircle />
     </div>
   )
 }
