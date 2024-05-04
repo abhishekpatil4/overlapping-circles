@@ -3,7 +3,7 @@ import { AddCircle } from './components/AddCircle'
 function App() {
   return (
     <div>
-    {/* <Circle color={"red"} number={1}/> */}
+    <h1 style={{textAlign:'center'}}>Tap anywhere!</h1>
     <AddCircle />
     </div>
   )
