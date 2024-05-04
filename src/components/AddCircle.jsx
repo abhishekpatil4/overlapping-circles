@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { Circle } from "./Circle";
 
-const colorFor = ['green', 'red', 'blue', 'yellow', 'gray', 'white', 'purple', 'brown', 'pink', 'orange'];
+const colorFor = ['lightskyblue', 'limegreen', 'lightgoldenrodyellow', 'tomato', 'plum', 'mistyrose', 'silver', 'chocolate', 'honeydew', 'lightpink'];
 
 function distanceBetweenCircles(x1, y1, r1, x2, y2, r2) {
     const d = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
