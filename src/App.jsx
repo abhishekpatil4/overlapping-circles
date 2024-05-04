@@ -6,7 +6,7 @@ import { Circle } from './components/Circle'
 function App() {
   return (
     <>
-    <Circle />
+    <Circle color={"red"} number={1}/>
     </>
   )
 }
