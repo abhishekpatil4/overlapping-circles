@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { Circle } from "./Circle";
 
-const colorFor = ['lightskyblue', 'limegreen', 'lightgoldenrodyellow', 'tomato', 'plum', 'mistyrose', 'silver', 'chocolate', 'honeydew', 'lightpink'];
+const colorFor = ['lightskyblue', 'limegreen', 'maroon', 'tomato', 'plum', 'gray', 'silver', 'chocolate', 'brown', 'lightpink'];
 
 function distanceBetweenCircles(x1, y1, r1, x2, y2, r2) {
     const d = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
@@ -39,12 +39,16 @@ export const AddCircle = () => {
             if (updatedCords.length > 1) {
                 updateCircles(updatedCords);
             }
-            if (updatedCords.length > 10) {
-                setCords([]);
-            }
             return updatedCords;
         });
     };
+    //clearing cords if circles are greater than 10
+    useEffect(() => {
+        if (cords.length > 10) {
+            setCords([]);
+        }
+    }, [cords]);
+
     return <>
         <div style={{ height: '100vh', width: "100vw" }} onClick={(event) => handleClick(event)}>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

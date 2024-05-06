@@ -1,4 +1,3 @@
-import { Circle } from './components/Circle'
 import { AddCircle } from './components/AddCircle'
 function App() {
   return (
