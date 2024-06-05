@@ -6,7 +6,7 @@ The color of the circles also changes based on the overlap count, providing a vi
 
 ## Live Demo
 
-You can view a live demo of the application hosted on Vercel: [https://abhishekpatil4-overlappingcircles.vercel.app/](https://abhishekpatil4-overlappingcircles.vercel.app/)
+You can view a live demo of the application hosted on Vercel: [https://abhishekpatil4-overlappingcircles.vercel.app/](https://abhishekpatil4-overlapping-circles.vercel.app/)
 
 
 ## Run Locally
